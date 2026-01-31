@@ -1,0 +1,8 @@
+CREATE TABLE pastes (
+  id UUID PRIMARY KEY,
+  content TEXT NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE NOT NULL,
+  expires_at TIMESTAMP WITH TIME ZONE,
+  max_views INTEGER,
+  view_count INTEGER NOT NULL DEFAULT 0
+);
