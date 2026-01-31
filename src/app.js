@@ -12,4 +12,9 @@ app.use(express.json());
 app.use("/api/healthz", healthRoute);
 app.use("/api/pastes", pasteRoutes);
 
+app.get("/", (req, res) => {
+  res.status(200).json({ status: "Pastebin Lite API running" });
+});
+
+
 module.exports = app;
